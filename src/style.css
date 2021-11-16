@@ -14,7 +14,6 @@ span {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 h1 {
-  font-family: Raleway;
   font-weight: 900;
   font-size: 34px;
   line-height: 48px;
@@ -47,9 +46,11 @@ li {
   font-size: 26px;
 }
 #city {
+  font-family: Raleway;
   display: inline;
 }
 #temp-now {
+  font-family: Poppins;
   display: inline;
   margin-left: 10px;
 }
