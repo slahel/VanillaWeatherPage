@@ -60,6 +60,7 @@ li {
   top: -15px;
   box-sizing: border-box;
   text-decoration: none;
+  text-underline-position: none;
 }
 .units .active {
   color: black;
