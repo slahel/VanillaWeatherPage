@@ -1,0 +1,85 @@
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
+  let minute = date.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${day} ${hour}:${minute}`;
+}
+
+let time = document.querySelector("#date");
+let now = new Date();
+time.innerHTML = formatDate(now);
+
+function showCityWeather(response) {
+  console.log(response.data);
+  document
+    .querySelector("#now-icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#now-icon")
+    .setAttribute("alt", response.data.weather[0].description);
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temp-now").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#feeling").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+}
+function search(city) {
+  let apiKey = "d327f9521127853e671914b6a74e0659";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(url).then(showCityWeather);
+}
+
+function searchCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  search(city);
+}
+
+function getPosition(position) {
+  let apiKey = "d327f9521127853e671914b6a74e0659";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(showCityWeather);
+}
+function clickLocalButton(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(getPosition);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", searchCity);
+
+let locateButton = document.querySelector("#locate-button");
+locateButton.addEventListener("click", clickLocalButton);
+
+search("london");
