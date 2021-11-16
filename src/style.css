@@ -60,7 +60,13 @@ li {
   box-sizing: border-box;
   text-decoration: none;
 }
-
+.units .active {
+  color: black;
+  cursor: default;
+}
+.units .active:hover {
+  text-decoration: none;
+}
 .weatherToday {
   padding: 20px;
 }

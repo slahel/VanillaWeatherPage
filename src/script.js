@@ -29,6 +29,8 @@ time.innerHTML = formatDate(now);
 
 function showCityWeather(response) {
   console.log(response.data);
+  celsiusTemp = Math.round(response.data.main.temp);
+
   document
     .querySelector("#now-icon")
     .setAttribute(
@@ -38,6 +40,7 @@ function showCityWeather(response) {
   document
     .querySelector("#now-icon")
     .setAttribute("alt", response.data.weather[0].description);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp-now").innerHTML = Math.round(
     response.data.main.temp
@@ -82,4 +85,28 @@ searchForm.addEventListener("submit", searchCity);
 let locateButton = document.querySelector("#locate-button");
 locateButton.addEventListener("click", clickLocalButton);
 
+function changeToFah(event) {
+  event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let tempNow = document.querySelector("#temp-now");
+  let fahTemp = (celsiusTemp * 9) / 5 + 32;
+  tempNow.innerHTML = Math.round(fahTemp);
+}
+
+function changeToCel(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let tempNow = document.querySelector("#temp-now");
+  tempNow.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", changeToCel);
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", changeToFah);
+
+let celsiusTemp = null;
 search("london");
