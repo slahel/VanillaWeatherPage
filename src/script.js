@@ -114,5 +114,6 @@ let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFah);
 
 let celsiusTemp = null;
-showForecastDays();
+
 search("london");
+showForecastDays();
