@@ -133,7 +133,7 @@ searchForm.addEventListener("submit", searchCity);
 let locateButton = document.querySelector("#locate-button");
 locateButton.addEventListener("click", clickLocalButton);
 
-function changeToFah(event) {
+/* function changeToFah(event) {
   event.preventDefault();
   celsius.classList.remove("active");
   fahrenheit.classList.add("active");
@@ -154,7 +154,7 @@ let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", changeToCel);
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", changeToFah);
+fahrenheit.addEventListener("click", changeToFah); */
 
 let celsiusTemp = null;
 
