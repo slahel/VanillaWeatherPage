@@ -153,7 +153,8 @@ let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", changeToCel);
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", changeToFah); */
+fahrenheit.addEventListener("click", changeToFah);
+let celsiusTemp = null; */
 
 function ShowSunRiseSet(response) {
   console.log(response.data);
@@ -162,10 +163,9 @@ function ShowSunRiseSet(response) {
 function getShowSunRiseSet(coords) {
   let apiKey = "d327f9521127853e671914b6a74e0659";
   let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
-  axios.get(url).then(showForecastDays);
+  axios.get(url).then(ShowSunRiseSet);
 }
 
-let celsiusTemp = null;
+SunRiseSet();
 
 search("london");
-SunRiseSet();
