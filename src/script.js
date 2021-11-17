@@ -49,7 +49,7 @@ function showForecastDays() {
   dayForecast.innerHTML = dayForecastHTML;
 }
 
-function getDayForecast(coords) {
+function getForecastDays(coords) {
   let apiKey = "d327f9521127853e671914b6a74e0659";
   let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
   console.log(url);
@@ -83,7 +83,7 @@ function showCityWeather(response) {
     response.data.wind.speed
   );
 
-  getDayForecast(response.data.coord);
+  getForecastDays(response.data.coord);
 }
 function search(city) {
   let apiKey = "d327f9521127853e671914b6a74e0659";
