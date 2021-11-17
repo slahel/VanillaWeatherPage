@@ -65,7 +65,7 @@ h3 {
 .weatherToday {
   padding: 20px;
 }
-.ul {
+ul.weatherNowDetails {
   list-style-type: none;
 }
 .weather-forecast-days {
