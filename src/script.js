@@ -155,6 +155,11 @@ celsius.addEventListener("click", changeToCel);
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFah); */
 
+function SunRiseSet(response) {
+  console.log(response.data);
+}
+
 let celsiusTemp = null;
 
 search("london");
+SunRiseSet();
