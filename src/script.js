@@ -28,7 +28,7 @@ let now = new Date();
 time.innerHTML = formatDate(now);
 
 function showForecastDays(response) {
-  console.log(response.data);
+  console.log(response.data.daily);
   let dayForecast = document.querySelector("#forecast-days");
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let dayForecastHTML = `<div class="row">`;
