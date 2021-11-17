@@ -30,12 +30,11 @@ time.innerHTML = formatDate(now);
 function showForecastDays() {
   let dayForecast = document.querySelector("#forecast-days");
   let days = ["Mon", "Tue", "Wed"];
-  let dayForecastHTML = `<div class= "row" >`;
+  let dayForecastHTML = `<div class = "row" >`;
   days.forEach(function (day) {
     dayForecastHTML =
       dayForecastHTML +
-      `
-              <div class= "col-2 ">
+      `       <div class= "col-2 ">
                   <div class="weather-forecast-date">${day}</div>
                   <div class="weather-forecast-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""
 ></div>
