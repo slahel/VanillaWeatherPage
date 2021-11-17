@@ -166,6 +166,6 @@ function getShowSunRiseSet(coords) {
   axios.get(url).then(ShowSunRiseSet);
 }
 
-SunRiseSet();
+getShowSunRiseSet();
 
 search("london");
