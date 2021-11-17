@@ -27,6 +27,11 @@ let time = document.querySelector("#date");
 let now = new Date();
 time.innerHTML = formatDate(now);
 
+function showForecastDays() {
+  let dayForecast = document.querySelectorAll("#forecast-days");
+  dayForecast.innerHTML = "day";
+}
+
 function showCityWeather(response) {
   console.log(response.data);
   celsiusTemp = Math.round(response.data.main.temp);
