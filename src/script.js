@@ -42,7 +42,6 @@ function showForecastDays() {
                     <span class="weather-forecast-days-max">10°</span>
                     <span class="weather-forecast-days-min">8°</span></div>
                 </div>
-          </div>
 `;
   });
 
