@@ -42,11 +42,7 @@ h3 {
   color: #1c4b82;
   border-color: #1c4b82;
 }
-.weatherToday {
-  border: 2px solid;
-  border-radius: 12px;
-  border-color: #dae1e7;
-}
+
 .weatherNowDetails {
   opacity: 0.7;
 }
