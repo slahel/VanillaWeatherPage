@@ -34,12 +34,12 @@ function formatForecastDays(timestamp) {
   return day;
 }
 
-function showForecastDays(response, index) {
+function showForecastDays(response) {
   let forecast = response.data.daily;
   let dayForecastElement = document.querySelector("#forecast-days");
   //let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let dayForecastHTML = `<div class="row">`;
-  forecast.forEach(function (ForecastDays) {
+  forecast.forEach(function (ForecastDays, index) {
     if (index > 0) {
       dayForecastHTML =
         dayForecastHTML +
