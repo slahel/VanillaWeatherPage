@@ -28,8 +28,8 @@ let now = new Date();
 time.innerHTML = formatDate(now);
 
 function showForecastDays() {
-  let dayForecast = document.querySelectorAll("#forecast-days");
-  dayForecast.innerHTML = "day";
+  let dayForecast = document.querySelector("#forecast-days");
+  dayForecast.innerHTML = "Today";
 }
 
 function showCityWeather(response) {
