@@ -27,6 +27,19 @@ let time = document.querySelector("#date");
 let now = new Date();
 time.innerHTML = formatDate(now);
 
+function showForecastDays(){
+    let forecast= querySelector(#days-forecast);
+    forecast.innerHTML =
+          `<div class="row">
+              <div class= "col-2 ">
+                  <div class="weather-forecast-date">Tue</div>
+                  <div class="weather-forecast-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""
+></div>
+                  <div class="weather-forecast-temp"><span class="weather-forecast-days-max">10°</span><span class="weather-forecast-days-min">8°</span></div>
+                </div>
+          </div>`
+}
+
 function showCityWeather(response) {
   console.log(response.data);
   celsiusTemp = Math.round(response.data.main.temp);
@@ -109,4 +122,5 @@ let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFah);
 
 let celsiusTemp = null;
+showForecastDays();
 search("london");
