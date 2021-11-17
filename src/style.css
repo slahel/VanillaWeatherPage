@@ -62,8 +62,11 @@ h3 {
   box-sizing: border-box;
   text-decoration: none;
 }
+.min-max {
+  color: #1c4b82;
+}
 .weatherToday {
-  padding: 20px;
+  padding: 10px;
 }
 ul.weatherNowDetails {
   list-style-type: none;
