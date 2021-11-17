@@ -39,20 +39,14 @@ function showForecastDays() {
                   <div class="weather-forecast-date">${day}</div>
                   <div class="weather-forecast-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""
 ></div>
-                  <div class="weather-forecast-temp"><span class="weather-forecast-days-max">10°</span><span class="weather-forecast-days-min">8°</span></div>
+                  <div class="weather-forecast-temp">
+                    <span class="weather-forecast-days-max">10°</span>
+                    <span class="weather-forecast-days-min">8°</span></div>
                 </div>
           </div>
 `;
   });
-  dayForecastHTML = `
-              <div class= "col-2 ">
-                  <div class="weather-forecast-date">Tue</div>
-                  <div class="weather-forecast-icon"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""
-></div>
-                  <div class="weather-forecast-temp"><span class="weather-forecast-days-max">10°</span><span class="weather-forecast-days-min">8°</span></div>
-                </div>
-          </div>
-`;
+
   dayForecastHTML = dayForecastHTML + `</div>`;
   dayForecast.innerHTML = dayForecastHTML;
 }
