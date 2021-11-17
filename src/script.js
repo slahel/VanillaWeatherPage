@@ -74,6 +74,7 @@ function getForecastDays(coords) {
 
 function showCityWeather(response) {
   console.log(response.data);
+  console.log(response.data.sys.sunrise);
 
   celsiusTemp = Math.round(response.data.main.temp);
 
