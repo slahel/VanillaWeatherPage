@@ -27,7 +27,8 @@ let time = document.querySelector("#date");
 let now = new Date();
 time.innerHTML = formatDate(now);
 
-function showForecastDays() {
+function showForecastDays(response) {
+  console.log(response.data);
   let dayForecast = document.querySelector("#forecast-days");
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let dayForecastHTML = `<div class="row">`;
@@ -52,7 +53,7 @@ function showForecastDays() {
 function getForecastDays(coords) {
   let apiKey = "d327f9521127853e671914b6a74e0659";
   let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
-  console.log(url);
+  axios.get(url).then(showForecastDays);
 }
 
 function showCityWeather(response) {
@@ -141,4 +142,3 @@ fahrenheit.addEventListener("click", changeToFah);
 let celsiusTemp = null;
 
 search("london");
-showForecastDays();
