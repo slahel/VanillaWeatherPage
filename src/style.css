@@ -81,6 +81,12 @@ li {
   font-size: 16px;
   opacity: 0.6;
 }
+.weather-forecast-temp {
+  font-size: 13px;
+}
+.weather-forecast-days-min {
+  opacity: 0.6;
+}
 #credits {
   opacity: 0.6;
 }
