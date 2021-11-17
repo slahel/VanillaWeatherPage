@@ -35,15 +35,14 @@ function formatForecastDays(timestamp) {
 }
 
 function showForecastDays(response, index) {
-  if (index < 6) {
-    let forecast = response.data.daily;
-    let dayForecastElement = document.querySelector("#forecast-days");
-    //let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-    let dayForecastHTML = `<div class="row">`;
-    forecast.forEach(function (ForecastDays) {
-      dayForecastHTML =
-        dayForecastHTML +
-        `<div class= "col-2 ">
+  let forecast = response.data.daily;
+  let dayForecastElement = document.querySelector("#forecast-days");
+  //let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let dayForecastHTML = `<div class="row">`;
+  forecast.forEach(function (ForecastDays) {
+    dayForecastHTML =
+      dayForecastHTML +
+      `<div class= "col-2 ">
                   <div class="weather-forecast-date">${formatForecastDays(
                     ForecastDays.dt
                   )}</div>
@@ -60,11 +59,10 @@ function showForecastDays(response, index) {
                     )}°</span></div>
                 </div>
 `;
-    });
+  });
 
-    dayForecastHTML = dayForecastHTML + `</div>`;
-    dayForecastElement.innerHTML = dayForecastHTML;
-  }
+  dayForecastHTML = dayForecastHTML + `</div>`;
+  dayForecastElement.innerHTML = dayForecastHTML;
 }
 
 function getForecastDays(coords) {
