@@ -90,8 +90,6 @@ function showCityWeather(response) {
   document.querySelector("#temp-now").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#today-max").innerHTML = Math.round(
-    response.data.main.temp_max
   document.querySelector("#feeling").innerHTML = Math.round(
     response.data.main.feels_like
   );
