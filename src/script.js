@@ -30,8 +30,8 @@ time.innerHTML = formatDate(now);
 function formatForecastDays(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let day = days[date.getDate()];
-  return day;
+  let day = date.getDate();
+  return days[day];
 }
 
 function showForecastDays(response) {
