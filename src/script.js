@@ -73,8 +73,7 @@ function getForecastDays(coords) {
 }
 
 function showCityWeather(response) {
-  console.log(Math.round(response.data.main.temp_max));
-  console.log(Math.round(response.data.main.temp_min));
+  console.log(response.data);
 
   celsiusTemp = Math.round(response.data.main.temp);
 
