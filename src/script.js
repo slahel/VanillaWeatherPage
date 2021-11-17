@@ -27,11 +27,6 @@ let time = document.querySelector("#date");
 let now = new Date();
 time.innerHTML = formatDate(now);
 
-function showForecastDays(){
-    let forecast= querySelector(#days-forecast);
-    forecast.innerHTML =  "day"
-}
-
 function showCityWeather(response) {
   console.log(response.data);
   celsiusTemp = Math.round(response.data.main.temp);
@@ -114,5 +109,4 @@ let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFah);
 
 let celsiusTemp = null;
-showForecastDays();
 search("london");
