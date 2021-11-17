@@ -90,7 +90,7 @@ function showCityWeather(response) {
   document.querySelector("#temp-now").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#today-min).innerHTML = Math.round(
+  document.querySelector("#today-min").innerHTML = Math.round(
     response.data.main.temp_min
   );
   document.querySelector("#today-max").innerHTML = Math.round(
