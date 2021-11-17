@@ -30,7 +30,7 @@ time.innerHTML = formatDate(now);
 function showForecastDays() {
   let dayForecast = document.querySelector("#forecast-days");
   let days = ["Mon", "Tue", "Wed"];
-  let dayForecastHTML = `<div class="row">`;
+  let dayForecastHTML = `<div class= "row" >`;
   days.forEach(function (day) {
     dayForecastHTML =
       dayForecastHTML +
