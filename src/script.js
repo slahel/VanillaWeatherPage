@@ -35,7 +35,7 @@ function formatForecastDays(timestamp) {
 }
 
 function showForecastDays(response, index) {
-  if ((index > 0) & (index < 6)) {
+  if (index < 6) {
     let forecast = response.data.daily;
     let dayForecastElement = document.querySelector("#forecast-days");
     //let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
