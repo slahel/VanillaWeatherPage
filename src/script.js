@@ -27,6 +27,13 @@ let time = document.querySelector("#date");
 let now = new Date();
 time.innerHTML = formatDate(now);
 
+let SunRiseSet(){
+    console.log(esponse.data.daily)
+    let sunrise = document.querySelector("#sunrise");
+    let sunset = document.querySelector("#sunset");
+    sunrise.innerHTML="08:00"
+    sunset.innerHTML="18:00"
+}
 function formatForecastDays(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -158,3 +165,4 @@ fahrenheit.addEventListener("click", changeToFah); */
 let celsiusTemp = null;
 
 search("london");
+SunRiseSet();
