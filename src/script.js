@@ -40,9 +40,10 @@ function showForecastDays(response, index) {
   //let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let dayForecastHTML = `<div class="row">`;
   forecast.forEach(function (ForecastDays) {
-    dayForecastHTML =
-      dayForecastHTML +
-      `<div class= "col-2 ">
+    if (index > 0) {
+      dayForecastHTML =
+        dayForecastHTML +
+        `<div class= "col-2 ">
                   <div class="weather-forecast-date">${formatForecastDays(
                     ForecastDays.dt
                   )}</div>
@@ -59,6 +60,7 @@ function showForecastDays(response, index) {
                     )}°</span></div>
                 </div>
 `;
+    }
   });
 
   dayForecastHTML = dayForecastHTML + `</div>`;
