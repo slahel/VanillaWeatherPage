@@ -156,16 +156,4 @@ let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFah);
 let celsiusTemp = null; */
 
-function ShowSunRiseSet(response) {
-  console.log(response.data);
-}
-
-function getShowSunRiseSet(coords) {
-  let apiKey = "d327f9521127853e671914b6a74e0659";
-  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
-  axios.get(url).then(ShowSunRiseSet);
-}
-
-getShowSunRiseSet();
-
 search("london");
