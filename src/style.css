@@ -27,7 +27,7 @@ h3 {
   color: #1c4b82;
 }
 #now-icon {
-  width: 150px;
+  width: 190px;
   margin-top: 70px;
 }
 .searchBar {
@@ -70,6 +70,9 @@ h3 {
 }
 ul.weatherNowDetails {
   list-style-type: none;
+}
+img {
+  opacity: 0.8;
 }
 .sunrise-sunset {
   color: #dd6b4d;
