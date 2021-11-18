@@ -169,8 +169,7 @@ function formatSunRiseSet(timestamp) {
   let now = new Date(timestamp * 1000);
   let minutes = now.getMinutes(); // 0,1,2, 12
   let hours = now.getHours(); //1, 2, 3, 4
-  console.log(minutes);
-  console.log(hours);
+  console.log(hours, minutes);
 }
 
 formatSunRiseSet(1637219090);
