@@ -173,7 +173,4 @@ function formatSunRiseSet(timestamp) {
   console.log(hours);
 }
 
-formatSunRiseSet(response.data.sys.sunrise);
-formatSunRiseSet(response.data.sys.sunset);
-
 search("london");
