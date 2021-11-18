@@ -121,6 +121,12 @@ function showCityWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#sunrise").innerHTML = formatSunRiseSet(
+    response.data.sys.sunrise
+  );
+  document.querySelector("#sunset").innerHTML = formatSunRiseSet(
+    response.data.sys.sunset
+  );
 
   getForecastDays(response.data.coord);
 }
