@@ -173,4 +173,6 @@ function formatSunRiseSet(timestamp) {
   console.log(hours);
 }
 
+formatSunRiseSet(1637219090);
+
 search("london");
