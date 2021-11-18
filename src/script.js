@@ -166,7 +166,7 @@ fahrenheit.addEventListener("click", changeToFah);
 let celsiusTemp = null; */
 
 function formatSunRiseSet(timestamp) {
-  let date = new Date(timestamp * 1000);
+  let now = new Date(timestamp * 1000);
   let minutes = now.getMinutes(); // 0,1,2, 12
   let hours = now.getHours(); //1, 2, 3, 4
   console.log(minutes);
