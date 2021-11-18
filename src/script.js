@@ -34,6 +34,19 @@ function formatForecastDays(timestamp) {
   return day;
 }
 
+function formatSunRiseSet(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = date.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${hour}:${minute}`;
+}
+
 function showForecastDays(response) {
   let forecast = response.data.daily;
   let dayForecastElement = document.querySelector("#forecast-days");
@@ -74,8 +87,8 @@ function getForecastDays(coords) {
 
 function showCityWeather(response) {
   console.log(response.data);
-  console.log(response.data.sys.sunrise);
-  console.log(response.data.sys.sunset);
+  console.log(formatSunRiseSet(response.data.sys.sunrise));
+  console.log(formatSunRiseSet(response.data.sys.sunset));
 
   celsiusTemp = Math.round(response.data.main.temp);
 
@@ -164,14 +177,5 @@ celsius.addEventListener("click", changeToCel);
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFah);
 let celsiusTemp = null; */
-
-function formatSunRiseSet(timestamp) {
-  let now = new Date(timestamp * 1000);
-  let minutes = now.getMinutes(); // 0,1,2, 12
-  let hours = now.getHours(); //1, 2, 3, 4
-  console.log(hours, minutes);
-}
-
-formatSunRiseSet(1637219090);
 
 search("london");
